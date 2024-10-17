@@ -357,3 +357,7 @@ hr{
   overflow: hidden;
   text-align: center;
 }
+
+#wishlistBooks p{
+  font-weight: 700;
+}
