@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title >Book Details</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+  </head>
+  <body>
+    <div class="main-page" id="productPage">
+      <nav class="navbar">
+        <div class="navbar-container container">
+          <input type="checkbox" name="" id="" />
+          <div class="hamburger-lines">
+            <span class="line line1"></span>
+            <span class="line line2"></span>
+            <span class="line line3"></span>
+          </div>
+          <ul class="menu-items">
+            <li><a href="/">Home</a></li>
+            <li><a href="wishList.html">Wishlist</a></li>
+          </ul>
+        </div>
+      </nav>
+      <div class="container pt-80">
+        <div class="col-md-12 pt-80 ">
+            <div class="book-details pb-80" id="bookDetails"></div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer textcolor-white bgcolor-darkgrey">
+      <div class="footer-text copyright">
+        <div class="col-md-12">
+          <div class="text-center">
+            <span class="cpy-text">
+              Copyright &copy;
+              <span id="copyright">
+                <script>
+                  document
+                    .getElementById("copyright")
+                    .appendChild(
+                      document.createTextNode(new Date().getFullYear())
+                    );
+                </script>
+              </span>
+              <a
+                href="https://mhasansagor.netlify.app/"
+                class="textcolor-skincolor font-weight-500"
+                target="_blank"
+                >Mehedi Hasan
+              </a>
+              All rights reserved.</span
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="javascript/book.js"></script>
+  </body>
+</html>

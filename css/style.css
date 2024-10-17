@@ -1,0 +1,359 @@
+@font-face {
+  font-family: myFont;
+  src: url(../Jost/static/Jost-ThinItalic.ttf);
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: myFont;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 26px;
+  letter-spacing: 0.2px;
+  color: #191919;
+}
+
+.container {
+  max-width: 1230px;
+}
+
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.navbar input[type="checkbox"],
+.navbar .hamburger-lines {
+  display: none;
+}
+
+.navbar {
+  box-shadow: 0px 5px 10px 0px #aaa;
+  position: fixed;
+  width: 100%;
+  height: 80px;
+  background-color: #fff !important;
+  color: #000;
+  z-index: 9999;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  height: 64px;
+  align-items: center;
+}
+
+.menu-items {
+  order: 2;
+  display: flex;
+}
+
+.menu-items li {
+  list-style: none;
+  margin-left: 1.5rem;
+  font-size: 1.3rem;
+}
+
+.navbar a {
+  color: #444;
+  text-decoration: none;
+  font-weight: 700;
+  transition: color 0.3s ease-in-out;
+}
+
+.navbar a:hover {
+  color: #f79323;
+}
+
+.input-box {
+  position: relative;
+  height: 50px;
+  max-width: 350px;
+  width: 100%;
+  background: #fff;
+  margin: 0 20px;
+  border-radius: 8px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.input-box .button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.input-box input {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  font-size: 18px;
+  font-weight: 400;
+  border: 1px solid;
+  border-radius: 8px;
+  padding: 0 125px 0 20px;
+  background-color: transparent;
+}
+.input-box .button {
+  right: 5px;
+  font-size: 16px;
+  font-weight: 400;
+  color: #fff;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 6px;
+  background-color: #4070f4;
+  cursor: pointer;
+}
+.input-box .button:active {
+  transform: translateY(-50%) scale(0.98);
+}
+
+.col-md-3 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+}
+
+.col-md-6 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+}
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+}
+.col-md-12 {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  height: 40px;
+  padding: 5px 8px;
+  font-size: 15px;
+  line-height: 1;
+  color: #000;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+
+.form-control:focus {
+  border: 1px solid #66afe9;
+  outline: none;
+  box-shadow: 0 0 5px #66afe9;
+}
+.book-card {
+  width: 100%;
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 8px;
+  position: relative;
+  cursor: pointer;
+}
+
+.wishlist-icon {
+  position: absolute;
+  top: 2px;
+  right: 4px;
+  cursor: pointer;
+  font-size: 18px;
+  color: #ff0000;
+}
+
+.book-image {
+  width: 100;
+  height: 285px;
+  overflow: hidden;
+}
+
+.book-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.book-detail {
+  margin-top: auto;
+  text-align: center;
+}
+.book-detail h3{
+  color: #191919;
+  font-weight: 700;
+}
+.book-detail p{
+  color: #191919;
+  font-weight: 700;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.pagination button {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid;
+}
+
+.previous {
+  display: inline-block !important;
+  border: none !important;
+  background-color: transparent !important;
+}
+
+.next {
+  display: inline-block !important;
+  border: none !important;
+  background-color: transparent !important;
+}
+
+.pagination button {
+  cursor: pointer;
+}
+.pagination button:hover {
+  background-color: rgba(0, 0, 0, 0.08);
+  border: none;
+}
+
+.pagination .active {
+  background-color: rgba(0, 0, 0, 0.08);
+}
+
+#toggleGridButton,
+#toggleGridButtons,#toggleGridButtonn {
+  cursor: pointer;
+}
+#toggleGridButtonn{
+  display: none;
+}
+.main-page{
+  min-height: calc(100vh - 67px);
+}
+footer {
+  height: 80px;
+  width: 100%;
+}
+
+.footer {
+  z-index: 1;
+  background-position: center center;
+  background-attachment: scroll;
+}
+
+.textcolor-white {
+  color: #fff;
+}
+
+.bgcolor-darkgrey {
+  background-color: #222d35;
+}
+
+.bgcolor-white {
+  background-color: #fff;
+}
+
+.copyright,
+.cpy-text {
+  color: rgba(255, 255, 255, 0.75) !important;
+}
+
+.copyright {
+  padding-top: 54px;
+  padding-bottom: 20px;
+  font-size: 15px;
+  margin-top: -33px;
+}
+
+.footer-text {
+  background-color: #1e2830;
+  background-position: center center;
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.textcolor-skincolor {
+  color: #f79323;
+}
+
+.font-weight-500 {
+  font-weight: 500;
+}
+
+.book-card img {
+  width: 100%;
+  padding: 10px;
+}
+
+
+.pt-80-0 {
+  padding: 80px 0;
+}
+
+.pt-100 {
+  padding-top: 100px;
+}
+.pt-130 {
+  padding-top: 130px;
+}
+
+.pt-80 {
+  padding-top: 80px;
+}
+.pb-80 {
+  padding-bottom: 80px;
+}
+
+.text-right {
+  text-align: right;
+}
+
+hr{
+  margin: 20px 0;
+}
+
+
+.book-details {
+  max-width: 600px;
+  margin: auto;
+  text-align: center;
+}
+.book-cover {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+#productPage .book-image {
+  margin-top: 50px;
+  height: 450px;
+  overflow: hidden;
+  text-align: center;
+}

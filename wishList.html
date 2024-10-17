@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EBOOK SHOP WISHLIST</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+  </head>
+
+  <body>
+    <div class="main-page">
+      <nav class="navbar">
+        <div class="navbar-container container">
+          <input type="checkbox" name="" id="" />
+          <div class="hamburger-lines">
+            <span class="line line1"></span>
+            <span class="line line2"></span>
+            <span class="line line3"></span>
+          </div>
+          <ul class="menu-items">
+            <li><a href="/">Home</a></li>
+            <li><a href="wishList.html">Wishlist</a></li>
+          </ul>
+        </div>
+      </nav>
+      <div class="container pt-100">
+        <div class="col-md-6">
+          <div>
+            <img
+              id="toggleGridButtons"
+              src="images/filter-icon-one.svg"
+              alt="filter-icon"
+              width="21"
+              height="22"
+            />
+            <img
+              id="toggleGridButton"
+              src="images/filter-icon-two.svg"
+              alt="filter-icon"
+              width="28"
+              height="28"
+            />
+            <img
+              id="toggleGridButtonn"
+              src="images/filter-icon-three.svg"
+              alt="filter-icon"
+              width="24"
+              height="24"
+            />
+          </div>
+        </div>
+        <hr>
+        <div class="text-center">
+          <h1>My Wishlist</h1>
+        </div>
+        <div class="pt-80">
+          <div
+            class="text-center"
+            id="wishlistBooks"
+          ></div>
+        </div>
+        <div class="text-center pt-80-0">
+          <div class="pagination" id="pagination"></div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer textcolor-white bgcolor-darkgrey">
+      <div class="footer-text copyright">
+        <div class="col-md-12">
+          <div class="text-center">
+            <span class="cpy-text">
+              Copyright &copy;
+              <span id="copyright">
+                <script>
+                  document
+                    .getElementById("copyright")
+                    .appendChild(
+                      document.createTextNode(new Date().getFullYear())
+                    );
+                </script>
+              </span>
+              <a
+                href="https://mhasansagor.netlify.app/"
+                class="textcolor-skincolor font-weight-500"
+                target="_blank"
+                >Mehedi Hasan
+              </a>
+              All rights reserved.</span
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="javascript/wishList.js"></script>
+    <script>
+      const toggleGridButton = document.getElementById("toggleGridButton");
+      const toggleGridButtons = document.getElementById("toggleGridButtons");
+      const toggleGridButtonn = document.getElementById("toggleGridButtonn");
+
+      toggleGridButton.addEventListener("click", () => {
+        if (wishlistBooks.classList.contains("col-md-6")) {
+          wishlistBooks.classList.remove("col-md-6");
+          wishlistBooks.classList.add("col-md-3");
+        }
+      });
+      toggleGridButtons.addEventListener("click", () => {
+        if (wishlistBooks.classList.contains("col-md-3")) {
+          wishlistBooks.classList.remove("col-md-3");
+          wishlistBooks.classList.add("col-md-6");
+        } else {
+          wishlistBooks.classList.remove("col-md-12");
+          wishlistBooks.classList.add("col-md-6");
+        }
+      });
+      toggleGridButtonn.addEventListener("click", () => {
+        if (wishlistBooks.classList.contains("col-md-6")) {
+          wishlistBooks.classList.remove("col-md-6");
+          wishlistBooks.classList.add("col-md-12");
+        }
+      });
+
+      if (window.innerWidth <= 767) {
+        document.getElementById("wishlistBooks").classList.add("col-md-6");
+      } else {
+        document.getElementById("wishlistBooks").classList.add("col-md-3");
+        document.getElementById("wishlistBooks").classList.remove("col-md-12");
+      }
+    </script>
+  </body>
+</html>
